@@ -3,54 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Health Analysis Data</title>
-  <link rel="stylesheet" href="./health_analysis.css">
+  <link rel="stylesheet" href="./health_analysis.css"> <!-- Link to external CSS file for styling -->
 </head>
 <body>
-   <nav><h1>Health Analysis Census</h1>
-<ul>
-  <li><a href="./index.html" id="home">Home </a></li>
-  <li><a href="./health_contact.html" id="contact">Contact Us </a></li>
-  <li><input type="text" id="conditionInput" placeholder="Enter a health condition">  </li>
-  <li><button id='btnSearch'>Search</button>
-  </li>
-
-</ul>
-</nav>
-<div class="container">
-<div class="analysisForm">
-<h1>Healthcare Data Analysis</h1>
-<div>
-<label for="name">Name:</label>
-<input type="text" id="name">
-</div>
-<div>
-<label>Gender:</label>
-<label for="male">Male</label>
-<input type="radio" name="gender" id="male" value="Male">
-<label for="female">Female</label>
-<input type="radio" name="gender" id="female" value="Female">
-</div>
-<div>
-<label for="age">Age:</label>
-<input type="number" id="age">
-</div>
-<div>
-<label for="condition">Condition:</label>
-<select id="condition">
-  <option value="">Select condition</option>
-  <option value="Diabetes">Diabetes</option>
-  <option value="Thyroid">Thyroid</option>
-  <option value="High Blood Pressure">High Blood Pressure</option>
-</select>
-</div>
-<button id="addPatient">Add Patient</button>
-<h2>Analysis Report</h2>
-<div id="report"></div>
-</div>
-<div class="searchCondition">
-    <div id="result"></div>
-</div>
-</div>
-<script src="./health_analysis.js"></script>
+   <!-- Navigation bar -->
+   <nav>
+       <h1>Health Analysis Census</h1>
+       <ul>
+           <li><a href="./index.html" id="home">Home</a></li> <!-- Link to home page -->
+           <li><a href="./health_contact.html" id="contact">Contact Us</a></li> <!-- Link to contact page -->
+           <li><input type="text" id="conditionInput" placeholder="Enter a health condition"></li> <!-- Input for searching health conditions -->
+           <li><button id='btnSearch'>Search</button></li> <!-- Button to trigger health condition search -->
+       </ul>
+   </nav>
+   
+   <!-- Main container for the form and search results -->
+   <div class="container">
+       <!-- Form section for healthcare data input -->
+       <div class="analysisForm">
+           <h1>Healthcare Data Analysis</h1>
+           <div>
+               <label for="name">Name:</label>
+               <input type="text" id="name"> <!-- Input field for patient name -->
+           </div>
+           
+           <div>
+               <label>Gender:</label>
+               <label for="male">Male</label>
+               <input type="radio" name="gender" id="male" value="Male"> <!-- Radio button for Male -->
+               <label for="female">Female</label>
+               <input type="radio" name="gender" id="female" value="Female"> <!-- Radio button for Female -->
+           </div>
+           
+           <div>
+               <label for="age">Age:</label>
+               <input type="number" id="age"> <!-- Input field for age -->
+           </div>
+           
+           <div>
+               <label for="condition">Condition:</label>
+               <select id="condition"> <!-- Dropdown for selecting health conditions -->
+                   <option value="">Select condition</option>
+                   <option value="Diabetes">Diabetes</option>
+                   <option value="Thyroid">Thyroid</option>
+                   <option value="High Blood Pressure">High Blood Pressure</option>
+               </select>
+           </div>
+           
+           <button id="addPatient">Add Patient</button> <!-- Button to add patient details -->
+           
+           <h2>Analysis Report</h2>
+           <div id="report"></div> <!-- Section to display analysis results -->
+       </div>
+       
+       <!-- Section for displaying search results -->
+       <div class="searchCondition">
+           <div id="result"></div>
+       </div>
+   </div>
+   
+   <script src="./health_analysis.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
